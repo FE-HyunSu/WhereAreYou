@@ -3,7 +3,7 @@ import { atom } from 'recoil';
 export const locationAtom = atom({
   key: 'locationAtom',
   default: {
-    lat: '',
-    lon: '',
+    lat: 0,
+    lng: 0,
   },
 });

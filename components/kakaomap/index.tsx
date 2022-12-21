@@ -1,15 +1,28 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import { MapUI } from './style';
+import { useRecoilValue } from 'recoil';
+import { locationAtom } from '../../store/store';
 
 const KakaoMap = () => {
-  const mapBox = useRef<HTMLDivElement | null>(null);
+  const recoilLocation = useRecoilValue(locationAtom);
   return (
     <>
       <MapUI>
-        <Map center={{ lat: 33.5563, lng: 126.79581 }} style={{ width: '100%', height: '360px' }}>
-          <MapMarker position={{ lat: 33.55635, lng: 126.795841 }}>
-            <div style={{ color: '#000' }}>Hello</div>
+        <Map
+          center={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
+          style={{ width: '100%', height: '100vh' }}
+        >
+          <MapMarker
+            position={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
+          >
+            <div
+              style={{
+                fontSize: `3rem`,
+              }}
+            >
+              👋👋👋👋👋
+            </div>
           </MapMarker>
         </Map>
       </MapUI>

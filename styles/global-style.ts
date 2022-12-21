@@ -29,8 +29,7 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     header + main{
-        height: calc(100vh - 10.2rem);
-        padding-bottom: 8rem;
+        height: 100vh;
         text-align: center;
         box-sizing: border-box;
         overflow: auto;
