@@ -49,11 +49,11 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
           />
-          <NextScript />
+          {/* <NextScript />
           <Script
             src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e30615da0741576c4249e7b7b3dec4ab&libraries=services&autoload=false"
             strategy="beforeInteractive"
-          />
+          /> */}
         </Head>
         <body>
           <Main />
