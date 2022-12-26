@@ -7,10 +7,19 @@ export const FooterBox = styled.footer`
   left: 0;
   width: 100%;
   height: 5rem;
-  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
   transition: 0.3s;
-  z-index: 5;
+  z-index: 11;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2rem);
+    z-index: -1;
+  }
   p {
     display: flex;
     justify-content: center;
@@ -20,7 +29,7 @@ export const FooterBox = styled.footer`
     padding: 0;
     font-weight: 300;
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.5);
     text-align: center;
     a {
       display: inline-block;

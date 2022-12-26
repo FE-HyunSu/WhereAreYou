@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <HeaderBox>
-        <h1>MAP</h1>
+        <h1>나는 지금 여기야</h1>
       </HeaderBox>
     </>
   );

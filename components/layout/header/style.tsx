@@ -9,13 +9,22 @@ export const HeaderBox = styled.header`
   align-items: center;
   width: 100%;
   height: 5rem;
-  border-top: 0.1rem solid rgba(255, 255, 255, 0.4);
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.4);
   z-index: 11;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2rem);
+    z-index: -1;
+  }
   h1 {
     font-weight: 200;
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     text-align: center;
     text-transform: uppercase;
   }

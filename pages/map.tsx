@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import KakaoMap from '../components/kakaomap';
 import Loading from '../components/loading';
 import ErrorBox from '../components/error';
 import { useRecoilState } from 'recoil';
@@ -35,7 +36,7 @@ const Index = () => {
         <ErrorBox />
       ) : (
         <>
-          <div>거기 지금 어디야</div>
+          <KakaoMap />
         </>
       )}
     </>
