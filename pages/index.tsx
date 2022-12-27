@@ -44,31 +44,22 @@ const Index = () => {
           <div>
             <Swiper
               className="etc-info-slide"
-              direction={'vertical'}
               autoHeight={true}
               slidesPerView={1}
               autoplay={{ delay: 3000 }}
             >
               <SwiperSlide>
-                <p>
-                  ☀️ 최고기온 : <span>&nbsp;test</span>
-                </p>
+                <img src="images/img_slide_01.png" alt="" style={{ width: '100%' }} />
               </SwiperSlide>
               <SwiperSlide>
-                <p>
-                  🌥 최저기온 : <span>&nbsp;test2</span>
-                </p>
+                <img src="images/img_slide_02.png" alt="" style={{ width: '100%' }} />
               </SwiperSlide>
               <SwiperSlide>
-                <p>
-                  🧭 풍향 : <span>&nbsp;test3</span>
-                </p>
-              </SwiperSlide>
-              <SwiperSlide>
-                <p>🌊 풍속 : test4</p>
+                <img src="images/img_slide_03.png" alt="" style={{ width: '100%' }} />
               </SwiperSlide>
             </Swiper>
           </div>
+          <a href="/map">이동</a>
         </>
       )}
     </>
