@@ -1,10 +1,13 @@
 import { HeaderBox } from './style';
+import { useRecoilValue } from 'recoil';
+import { headerTitle } from '../../../store/store';
 
 const Header = () => {
+  const Title = useRecoilValue(headerTitle);
   return (
     <>
       <HeaderBox>
-        <h1>나는 지금 여기야</h1>
+        <h1>{Title}</h1>
       </HeaderBox>
     </>
   );

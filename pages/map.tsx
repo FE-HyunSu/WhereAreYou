@@ -3,9 +3,10 @@ import KakaoMap from '../components/kakaomap';
 import Loading from '../components/loading';
 import ErrorBox from '../components/error';
 import { useRecoilState } from 'recoil';
-import { locationAtom } from '../store/store';
+import { locationAtom, headerTitle } from '../store/store';
 
 const Index = () => {
+  const [isHeaderTitleRecoil, setHeaderTitleRecoil] = useRecoilState(headerTitle);
   const [isLoading, setLoading] = useState<Boolean>(true);
   const [isError, setError] = useState<Boolean>(false);
   const [isPosition, setPosition] = useRecoilState(locationAtom);
@@ -27,6 +28,7 @@ const Index = () => {
   };
   useEffect(() => {
     locationSet();
+    setHeaderTitleRecoil('나는 지금 여기야');
   }, []);
   return (
     <>

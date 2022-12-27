@@ -7,3 +7,8 @@ export const locationAtom = atom({
     lng: 0,
   },
 });
+
+export const headerTitle = atom({
+  key: 'headerTitle',
+  default: '거기 지금 어디야',
+});
