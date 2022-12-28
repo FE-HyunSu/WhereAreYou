@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import KakaoMap from '../components/kakaomap';
 import Loading from '../components/loading';
 import ErrorBox from '../components/error';
@@ -10,29 +11,21 @@ const Index = () => {
   const [isLoading, setLoading] = useState<Boolean>(true);
   const [isError, setError] = useState<Boolean>(false);
   const [isPosition, setPosition] = useRecoilState(locationAtom);
-  const locationSet = async () => {
-    try {
-      await navigator.geolocation.getCurrentPosition((position) => {
-        setPosition({
-          lat: Number(position.coords.latitude),
-          lng: Number(position.coords.longitude),
-        });
-      });
-      setTimeout(() => {
-        setLoading(false);
-      }, 4000);
-    } catch {
-      setLoading(false);
-      setError(true);
-    }
-  };
+  const router = useRouter();
+  const { lat, lng } = router.query;
+
   useEffect(() => {
-    locationSet();
+    if (!router.isReady) return;
+    setPosition({
+      lat: Number(lat),
+      lng: Number(lng),
+    });
     setHeaderTitleRecoil('나는 지금 여기야');
-  }, []);
+  }, [router.isReady]);
   return (
     <>
-      {isLoading && isLoading ? (
+      <KakaoMap />
+      {/* {isLoading && isLoading ? (
         <Loading />
       ) : isError && isError ? (
         <ErrorBox />
@@ -40,7 +33,7 @@ const Index = () => {
         <>
           <KakaoMap />
         </>
-      )}
+      )} */}
     </>
   );
 };

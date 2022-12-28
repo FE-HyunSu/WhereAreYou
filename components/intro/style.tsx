@@ -24,7 +24,7 @@ export const BtnShare = styled.button`
   width: 30rem;
   margin: auto;
   padding: 2.2rem 0;
-  background-color: #fff000;
+  background-color: #e8d747;
   border-radius: 10rem;
   color: #3a3a3a;
   font-size: 1.4rem;
