@@ -18,7 +18,7 @@ export const IntroUI = styled.div`
 export const BtnShare = styled.button`
   display: block;
   position: absolute;
-  top: 72%;
+  top: 75%;
   right: 0;
   left: 0;
   width: 30rem;

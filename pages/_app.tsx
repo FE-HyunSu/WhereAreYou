@@ -13,11 +13,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <RecoilRoot>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="MAP" />
-          <meta property="og:description" content="MAP" />
+          <meta property="og:title" content="거기 지금 어디야" />
+          <meta property="og:description" content="거기 지금 어디야" />
           <meta property="og:image" content="/img_meta.png" />
           <link rel="icon" href="/favicon.ico" />
-          <title>MAP</title>
+          <title>🗺 거기 지금 어디야</title>
         </Head>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
