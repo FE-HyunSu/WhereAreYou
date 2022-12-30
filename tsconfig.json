@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["kakao.maps.d.ts"],
+    // "types": ["kakao.maps.d.ts"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,

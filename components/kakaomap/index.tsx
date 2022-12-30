@@ -13,7 +13,7 @@ const KakaoMap = () => {
           center={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
           style={{ width: '100%', height: '100vh' }}
         >
-          <MapMarker
+          {/* <MapMarker
             position={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
           >
             <div
@@ -23,7 +23,7 @@ const KakaoMap = () => {
             >
               👋👋👋👋👋
             </div>
-          </MapMarker>
+          </MapMarker> */}
         </Map>
       </MapUI>
     </>
