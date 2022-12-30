@@ -1,5 +1,5 @@
 {
-  "name": "ProjectName",
+  "name": "MAP",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,12 +12,17 @@
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
+    "axios": "^1.2.1",
+    "dayjs": "^1.11.7",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-kakao-maps-sdk": "^1.1.5",
+    "recoil": "^0.7.6",
     "styled-reset": "^4.4.2",
+    "swiper": "^8.4.5",
     "typescript": "4.8.4"
   },
   "devDependencies": {

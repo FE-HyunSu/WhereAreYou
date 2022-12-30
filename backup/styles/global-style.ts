@@ -28,4 +28,10 @@ export const GlobalStyle = createGlobalStyle`
             fill: #f2f3f4;
         }
     }
+    header + main{
+        height: 100vh;
+        text-align: center;
+        box-sizing: border-box;
+        overflow: auto;
+    }
 `;
