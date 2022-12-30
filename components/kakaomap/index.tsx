@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, MapMarker } from 'react-kakao-maps-sdk';
+// import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import { MapUI } from './style';
 import { useRecoilValue } from 'recoil';
 import { locationAtom } from '../../store/store';
@@ -9,11 +9,11 @@ const KakaoMap = () => {
   return (
     <>
       <MapUI>
-        <Map
+        {/* <Map
           center={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
           style={{ width: '100%', height: '100vh' }}
         >
-          {/* <MapMarker
+          <MapMarker
             position={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
           >
             <div
@@ -23,8 +23,8 @@ const KakaoMap = () => {
             >
               👋👋👋👋👋
             </div>
-          </MapMarker> */}
-        </Map>
+          </MapMarker>
+        </Map> */}
       </MapUI>
     </>
   );

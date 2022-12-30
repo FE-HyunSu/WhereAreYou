@@ -1,5 +1,5 @@
 {
-  "name": "MAP",
+  "name": "WhereAreYou",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,7 +19,6 @@
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-kakao-maps-sdk": "^1.1.5",
     "recoil": "^0.7.6",
     "styled-reset": "^4.4.2",
     "swiper": "^8.4.5",
