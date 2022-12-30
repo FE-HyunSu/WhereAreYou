@@ -47,7 +47,7 @@ const IntroView = () => {
     <>
       <IntroUI>
         <div className="inner">
-          <BtnShare onClick={() => linkShare()}>카카오톡으로 내위치 공유하기</BtnShare>
+          <BtnShare onClick={() => moveTest()}>카카오톡으로 내위치 공유하기</BtnShare>
         </div>
       </IntroUI>
     </>
