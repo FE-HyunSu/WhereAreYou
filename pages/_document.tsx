@@ -53,6 +53,7 @@ class MyDocument extends Document {
             src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e30615da0741576c4249e7b7b3dec4ab&libraries=services&autoload=false"
             strategy="beforeInteractive"
           />
+          <Script src="https://developers.kakao.com/sdk/js/kakao.js" strategy="beforeInteractive" />
         </Head>
         <body>
           <Main />

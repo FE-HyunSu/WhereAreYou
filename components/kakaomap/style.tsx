@@ -15,11 +15,11 @@ export const MapUI = styled.div`
 export const MarckerItem = styled.div`
   display: block;
   position: absolute;
-  top: calc(50% - 1.5rem);
-  left: calc(50% - 1.5rem);
+  top: calc(50% - 7rem);
+  left: calc(50% - 2rem);
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 6rem;
   text-indent: -999rem;
   animation: ${MotionBounce} 1s alternate infinite;
   z-index: 3;
@@ -45,7 +45,7 @@ export const BtnShare = styled.button`
   width: 25rem;
   margin: auto;
   padding: 2rem 0;
-  background-color: #e8d747;
+  background-color: #fbe64d;
   border-radius: 10rem;
   color: #3a3a3a;
   font-size: 1.4rem;
