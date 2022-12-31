@@ -39,7 +39,25 @@ const KakaoMap = () => {
           center={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
           style={{ width: '100%', height: '100vh' }}
         >
-          <MarckerItem>나는 지금 여기야</MarckerItem>
+          <div className="test">
+            <MapMarker
+              position={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
+              image={{
+                src: 'https://hswhereareyou.netlify.app/images/img_here.png',
+                size: {
+                  width: 50,
+                  height: 65,
+                },
+                options: {
+                  offset: {
+                    x: 25,
+                    y: 65,
+                  },
+                },
+              }}
+            ></MapMarker>
+            {/* <MarckerItem>나는 지금 여기야</MarckerItem> */}
+          </div>
         </Map>
         <BtnShare onClick={() => kakaoShare()}>카카오톡으로 위치 공유하기</BtnShare>
       </MapUI>
