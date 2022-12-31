@@ -1,33 +1,12 @@
-## 🧰 Boilerplate ver2.
+## 🗺 WhereAreYou
 
-- React Nextjs + Typescript.
+### 🏂 URL
 
-### 🪫 custom add file
+- page : [https://hswhereareyou.netlify.app](https://hswhereareyou.netlify.app)
 
-- `.babelrc`
-- `styles/global-styled.ts`
-- `styles/styled.d.ts`
-- `styles/theme.ts`
-- [\_document.tsx](https://fe-hyunsu.github.io/app-document)
-- [modal](https://fe-hyunsu.github.io/modal)
+### 🪬 내용
 
-### 🎛 package version.
-
-```json
-...
-"dependencies": {
-	"@types/node": "18.11.9",
-	"@types/react": "18.0.25",
-	"@types/react-dom": "18.0.8",
-	"eslint": "8.27.0",
-	"eslint-config-next": "13.0.2",
-	"next": "13.0.2",
-	"react": "18.2.0",
-	"react-dom": "18.2.0",
-	"styled-reset": "^4.4.2",
-	"typescript": "4.8.4"
-},
-"devDependencies": {
-	"@types/styled-components": "^5.1.26"
-}
-```
+- 현재 위치 체크.
+- 위치기반 지도 표기.
+- 카카오 API 연동.
+- 내 위치 카카오톡 공유.
