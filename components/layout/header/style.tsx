@@ -23,7 +23,7 @@ export const HeaderBox = styled.header`
   }
   h1 {
     font-weight: 200;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: rgba(0, 0, 0, 0.8);
     text-align: center;
     text-transform: uppercase;

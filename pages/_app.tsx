@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
@@ -8,6 +9,12 @@ import Footer from '../components/layout/footer';
 import { RecoilRoot } from 'recoil';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  useEffect(() => {
+    if (!window.Kakao.isInitialized()) {
+      window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_KEY);
+      window.Kakao.isInitialized();
+    }
+  }, []);
   return (
     <>
       <RecoilRoot>
