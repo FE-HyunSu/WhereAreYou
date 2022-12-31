@@ -1,11 +1,14 @@
 import React from 'react';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
-import { MapUI } from './style';
+import { MapUI, MarckerItem, BtnShare } from './style';
 import { useRecoilValue } from 'recoil';
 import { locationAtom } from '../../store/store';
 
 const KakaoMap = () => {
   const recoilLocation = useRecoilValue(locationAtom);
+  const kakaoShare = () => {
+    alert('카톡 공유하기 연동 필요.');
+  };
   return (
     <>
       <MapUI>
@@ -13,18 +16,9 @@ const KakaoMap = () => {
           center={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
           style={{ width: '100%', height: '100vh' }}
         >
-          <MapMarker
-            position={{ lat: Number(recoilLocation.lat), lng: Number(recoilLocation.lng) }}
-          >
-            <div
-              style={{
-                fontSize: `3rem`,
-              }}
-            >
-              👋👋👋👋👋
-            </div>
-          </MapMarker>
+          <MarckerItem>나는 지금 여기야</MarckerItem>
         </Map>
+        <BtnShare onClick={() => kakaoShare()}>카카오톡으로 공유하기</BtnShare>
       </MapUI>
     </>
   );

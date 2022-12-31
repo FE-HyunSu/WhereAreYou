@@ -33,12 +33,12 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/svg" />
-          <meta property="og:title" content="거기 지금 어디야" />
+          <meta property="og:title" content="🗺 거기 지금 어디야" />
           <meta property="og:image" content="" />
-          <meta property="og:description" content="거기 지금 어디야" />
+          <meta property="og:description" content="🗺 거기 지금 어디야" />
           <meta property="og:url" content="" />
-          <meta name="description" content="거기 지금 어디야" />
-          <meta name="keywords" content="거기 지금 어디야" />
+          <meta name="description" content="🗺 거기 지금 어디야" />
+          <meta name="keywords" content="🗺 거기 지금 어디야" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"

@@ -46,9 +46,9 @@ export const BtnShare = styled.button`
   top: 75%;
   right: 0;
   left: 0;
-  width: 30rem;
+  width: 25rem;
   margin: auto;
-  padding: 2.2rem 0;
+  padding: 2rem 0;
   background-color: #e8d747;
   border-radius: 10rem;
   color: #3a3a3a;
