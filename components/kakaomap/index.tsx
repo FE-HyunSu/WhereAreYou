@@ -15,16 +15,16 @@ const KakaoMap = () => {
         description: '나는 지금 여기야',
         imageUrl: 'https://hswhereareyou.netlify.app/img_meta.png',
         link: {
-          mobileWebUrl: `https://hswhereareyou.netlify.app/map?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
-          webUrl: `https://hswhereareyou.netlify.app/map?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
+          mobileWebUrl: `https://hswhereareyou.netlify.app/view?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
+          webUrl: `https://hswhereareyou.netlify.app/view?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
         },
       },
       buttons: [
         {
           title: '웹으로 보기',
           link: {
-            mobileWebUrl: `https://hswhereareyou.netlify.app/map?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
-            webUrl: `https://hswhereareyou.netlify.app/map?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
+            mobileWebUrl: `https://hswhereareyou.netlify.app/view?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
+            webUrl: `https://hswhereareyou.netlify.app/view?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
           },
         },
       ],
@@ -41,7 +41,7 @@ const KakaoMap = () => {
         >
           <MarckerItem>나는 지금 여기야</MarckerItem>
         </Map>
-        <BtnShare onClick={() => kakaoShare()}>카카오톡으로 공유하기</BtnShare>
+        <BtnShare onClick={() => kakaoShare()}>카카오톡으로 위치 공유하기</BtnShare>
       </MapUI>
     </>
   );
