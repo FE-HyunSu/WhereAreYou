@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const BgScaleMotion = keyframes`
+  0%{background-size:100% auto;}
+  100%{background-size:130% auto;}
+`;
 
 export const IntroUI = styled.div`
   display: flex;
@@ -40,6 +45,7 @@ export const IntroUI = styled.div`
     }
     margin: auto;
     background: url(images/img_slide_01.png) no-repeat 50% 50% / 100% auto;
+    animation: ${BgScaleMotion} 20s alternate infinite linear;
   }
 `;
 
