@@ -35,6 +35,9 @@ export const IntroUI = styled.div`
     width: 100%;
     max-width: 102.4rem;
     min-height: 100vh;
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+      min-height: -webkit-fill-available;
+    }
     margin: auto;
     background: url(images/img_slide_01.png) no-repeat 50% 50% / 100% auto;
   }

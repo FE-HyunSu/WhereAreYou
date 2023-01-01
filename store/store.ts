@@ -12,3 +12,8 @@ export const headerTitle = atom({
   key: 'headerTitle',
   default: '거기 지금 어디야',
 });
+
+export const currentLocation = atom({
+  key: 'currentLocation',
+  default: '',
+});

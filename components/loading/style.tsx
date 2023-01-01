@@ -14,6 +14,9 @@ export const LoadingBox = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    height: -webkit-fill-available;
+  }
   z-index: 10;
   &:before {
     content: '';

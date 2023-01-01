@@ -9,6 +9,9 @@ export const MapUI = styled.div`
   display: block;
   position: relative;
   height: 100vh;
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    height: -webkit-fill-available;
+  }
   z-index: 10;
 `;
 

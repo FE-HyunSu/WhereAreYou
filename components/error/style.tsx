@@ -14,6 +14,9 @@ export const ErrorBoxUI = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    height: -webkit-fill-available;
+  }
   background-color: #000;
   opacity: 0.5;
   z-index: 11;
