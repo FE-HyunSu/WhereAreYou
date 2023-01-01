@@ -6,7 +6,7 @@
 
 ### 👩‍🚀 구현 내용.
 
-<img src="https://hswhereareyou.netlify.app/img_readme.png" width="800" alt="" />
+<img src="https://hswhereareyou.netlify.app/images/img_readme.png" width="700" alt="" />
 
 - 내 위치를 GPS기반으로 위도, 경도값을 호출. (브라우저의 위치서비스를 허용해야 함)
 - 위도, 경도값을 기준으로 지도에 위치 표기.
