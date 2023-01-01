@@ -13,12 +13,25 @@ export const MapUI = styled.div`
     height: -webkit-fill-available;
   }
   z-index: 10;
+  #react-kakao-maps-sdk-map-container {
+    div {
+      div {
+        div {
+          div {
+            img {
+              animation: ${MotionBounce} 1s alternate infinite;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const MarckerItem = styled.div`
   display: block;
   position: absolute;
-  top: calc(50% - 7rem);
+  top: calc(50% - 6rem);
   left: calc(50% - 2rem);
   display: block;
   width: 4rem;
