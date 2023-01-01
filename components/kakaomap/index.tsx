@@ -39,8 +39,8 @@ const KakaoMap = () => {
     Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
-        title: '✨ 거기 지금 어디야',
-        description: `나는 지금 ${useLocation}`,
+        title: '✨ 나는 지금 여기야',
+        description: `${useLocation}`,
         imageUrl: 'https://hswhereareyou.netlify.app/img_meta.png',
         link: {
           mobileWebUrl: `https://hswhereareyou.netlify.app/view?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
