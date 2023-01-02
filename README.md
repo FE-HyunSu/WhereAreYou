@@ -1,8 +1,8 @@
-## 🗺 WhereAreYou (거기 지금 어디야)
+## [![Netlify Status](https://api.netlify.com/api/v1/badges/ad78ecfd-3a0e-491d-95c2-6efeadeb91db/deploy-status)](https://app.netlify.com/sites/hswhereareyou/deploys)<br/>🗺 WhereAreYou (거기 지금 어디야)
 
 ### 🧑‍💻 프로젝트 개요.
 
-- 현재 내 위치를 친구에게 카카오톡으로 공유.
+- 현재 내 위치를 친구에게 카카오톡으로 공유하는 서비스.
 
 ### 👩‍🚀 구현 내용.
 
