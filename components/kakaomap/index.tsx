@@ -4,13 +4,14 @@ import { getGeoCode } from '../../api/api';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import { MapUI, MarckerItem, BtnShare } from './style';
 import { useRecoilValue, useRecoilState } from 'recoil';
-import { locationAtom, currentLocation } from '../../store/store';
+import { locationAtom, currentLocation, headerTitle } from '../../store/store';
 import Loading from '../../components/loading';
 
 const KakaoMap = () => {
   const [isLoading, setLoading] = useState<Boolean>(true);
   const recoilLocation = useRecoilValue(locationAtom);
   const [useLocation, setUseLocation] = useRecoilState(currentLocation);
+  const [isHeaderTitleRecoil, setHeaderTitleRecoil] = useRecoilState(headerTitle);
   const [isAddress, setAddress] = useState<String>('');
   const router = useRouter();
   const returnParam = (keyWord: string) => {
@@ -26,6 +27,7 @@ const KakaoMap = () => {
         responseGeo.data.response.result[0].structure.level4A +
         responseGeo.data.response.result[0].structure.level4AC +
         responseGeo.data.response.result[0].structure.level4L;
+      setHeaderTitleRecoil(responseAddress === `` ? `여기 지금 어디야` : responseAddress);
       setLoading(false);
       setUseLocation(responseAddress);
       setAddress(responseAddress);
