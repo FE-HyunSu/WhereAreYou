@@ -1,35 +1,34 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { getGeoCode } from '../../api/api';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import { MapUI, MarckerItem, BtnShare } from './style';
 import { useRecoilValue, useRecoilState } from 'recoil';
 import { locationAtom, currentLocation } from '../../store/store';
-import { getGeoCode } from '../../api/api';
 import Loading from '../../components/loading';
-import { useRouter } from 'next/router';
 
 const KakaoMap = () => {
   const [isLoading, setLoading] = useState<Boolean>(true);
   const recoilLocation = useRecoilValue(locationAtom);
   const [useLocation, setUseLocation] = useRecoilState(currentLocation);
-  const [isLat, setLat] = useState<Number>(0);
-  const [isLng, setLng] = useState<Number>(0);
+  const [isAddress, setAddress] = useState<String>('');
   const router = useRouter();
   const returnParam = (keyWord: string) => {
     return router.asPath.split(keyWord + '=')[1].split('&')[0];
   };
-  const getInfoWeather = async (lat: Number, lon: Number) => {
+  const getAddressInfo = async (lat: Number, lon: Number) => {
     try {
       const responseGeo = await getGeoCode(lat, lon);
-      setLoading(false);
-      setUseLocation(
+      const responseAddress =
         responseGeo.data.response.result[0].structure.level1 +
-          ` ` +
-          responseGeo.data.response.result[0].structure.level2 +
-          ` ` +
-          responseGeo.data.response.result[0].structure.level3 +
-          ` ` +
-          responseGeo.data.response.result[0].structure.level4A
-      );
+        responseGeo.data.response.result[0].structure.level2 +
+        responseGeo.data.response.result[0].structure.level3 +
+        responseGeo.data.response.result[0].structure.level4A +
+        responseGeo.data.response.result[0].structure.level4AC +
+        responseGeo.data.response.result[0].structure.level4L;
+      setLoading(false);
+      setUseLocation(responseAddress);
+      setAddress(responseAddress);
     } catch {
       setLoading(false);
     }
@@ -40,7 +39,7 @@ const KakaoMap = () => {
       objectType: 'feed',
       content: {
         title: '✨ 나는 지금 여기야',
-        description: `${useLocation}`,
+        description: `${isAddress}`,
         imageUrl: 'https://hswhereareyou.netlify.app/img_meta.png',
         link: {
           mobileWebUrl: `https://hswhereareyou.netlify.app/view?lat=${recoilLocation.lat}&lng=${recoilLocation.lng}`,
@@ -63,9 +62,7 @@ const KakaoMap = () => {
 
   useEffect(() => {
     if (!router) return;
-    setLat(Number(returnParam('lat')));
-    setLng(Number(returnParam('lng')));
-    getInfoWeather(Number(returnParam('lat')), Number(returnParam('lng')));
+    getAddressInfo(Number(returnParam('lat')), Number(returnParam('lng')));
     setLoading(false);
   }, []);
 
