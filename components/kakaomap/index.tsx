@@ -65,7 +65,6 @@ const KakaoMap = () => {
   useEffect(() => {
     if (!router) return;
     getAddressInfo(Number(returnParam('lat')), Number(returnParam('lng')));
-    setLoading(false);
   }, []);
 
   return (
