@@ -18,20 +18,24 @@ const KakaoMap = () => {
     return router.asPath.split(keyWord + '=')[1].split('&')[0];
   };
   const getAddressInfo = async (lat: Number, lon: Number) => {
-    try {
-      const responseGeo = await getGeoCode(lat, lon);
-      const responseAddress =
-        responseGeo.data.response.result[0].structure.level1 +
-        responseGeo.data.response.result[0].structure.level2 +
-        responseGeo.data.response.result[0].structure.level3 +
-        responseGeo.data.response.result[0].structure.level4A +
-        responseGeo.data.response.result[0].structure.level4L;
-      setHeaderTitleRecoil(responseAddress === `` ? `여기 지금 어디야` : responseAddress);
-      setLoading(false);
-      setUseLocation(responseAddress);
-      setAddress(responseAddress);
-    } catch {
-      setLoading(false);
+    if (navigator.geolocation) {
+      try {
+        const responseGeo = await getGeoCode(lat, lon);
+        const responseAddress =
+          responseGeo.data.response.result[0].structure.level1 +
+          responseGeo.data.response.result[0].structure.level2 +
+          responseGeo.data.response.result[0].structure.level3 +
+          responseGeo.data.response.result[0].structure.level4A +
+          responseGeo.data.response.result[0].structure.level4L;
+        setHeaderTitleRecoil(responseAddress === `` ? `여기 지금 어디야` : responseAddress);
+        setLoading(false);
+        setUseLocation(responseAddress);
+        setAddress(responseAddress);
+      } catch {
+        setLoading(false);
+      }
+    } else {
+      alert('브라우저의 위치서비스 권한을 허용해 주세요.');
     }
   };
   const kakaoShare = () => {
