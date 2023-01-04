@@ -25,7 +25,6 @@ const KakaoMap = () => {
         responseGeo.data.response.result[0].structure.level2 +
         responseGeo.data.response.result[0].structure.level3 +
         responseGeo.data.response.result[0].structure.level4A +
-        responseGeo.data.response.result[0].structure.level4AC +
         responseGeo.data.response.result[0].structure.level4L;
       setHeaderTitleRecoil(responseAddress === `` ? `여기 지금 어디야` : responseAddress);
       setLoading(false);

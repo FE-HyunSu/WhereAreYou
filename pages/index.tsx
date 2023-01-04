@@ -11,19 +11,23 @@ const Index = () => {
   const [isError, setError] = useState<Boolean>(false);
   const [isPosition, setPosition] = useRecoilState(locationAtom);
   const locationSet = async () => {
-    try {
-      await navigator.geolocation.getCurrentPosition((position) => {
-        setPosition({
-          lat: Number(position.coords.latitude),
-          lng: Number(position.coords.longitude),
+    if (navigator.geolocation) {
+      try {
+        await navigator.geolocation.getCurrentPosition((position) => {
+          setPosition({
+            lat: Number(position.coords.latitude),
+            lng: Number(position.coords.longitude),
+          });
         });
-      });
-      setTimeout(() => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 4000);
+      } catch {
         setLoading(false);
-      }, 4000);
-    } catch {
-      setLoading(false);
-      setError(true);
+        setError(true);
+      }
+    } else {
+      alert('브라우저의 위치서비스 권한을 허용해 주세요.');
     }
   };
   useEffect(() => {
