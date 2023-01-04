@@ -4,7 +4,7 @@ import KakaoMap from '../components/kakaomap';
 import { useRecoilState } from 'recoil';
 import { locationAtom, headerTitle } from '../store/store';
 
-const Index = () => {
+const Map = () => {
   const [isHeaderTitleRecoil, setHeaderTitleRecoil] = useRecoilState(headerTitle);
   const [isPosition, setPosition] = useRecoilState(locationAtom);
   const router = useRouter();
@@ -25,4 +25,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Map;
