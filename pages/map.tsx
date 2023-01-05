@@ -34,8 +34,8 @@ const Map = () => {
     if (!router.isReady) return;
     if ((Number(lat) === 0 && Number(lng) === 0) || !navigator.geolocation) {
       reGeolocation();
-    } else {
       alert('브라우저의 위치서비스 권한을 허용해 주세요.');
+      return;
     }
     setPosition({
       lat: Number(lat),
