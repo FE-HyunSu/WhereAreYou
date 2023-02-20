@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { useRouter } from 'next/router';
 import { getGeoCode } from '../../api/api';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
@@ -96,7 +97,6 @@ const KakaoMap = () => {
                 },
               }}
             ></MapMarker>
-            {/* <MarckerItem>나는 지금 여기야</MarckerItem> */}
           </Map>
           <BtnShare onClick={() => kakaoShare()}>카카오톡으로 위치 공유하기</BtnShare>
         </MapUI>
