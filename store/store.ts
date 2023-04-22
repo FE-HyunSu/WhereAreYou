@@ -8,7 +8,6 @@ export const locationAtom = atom({
     lat: 0,
     lng: 0,
   },
-  effects_UNSTABLE: [persistAtom],
 });
 
 export const headerTitle = atom({
@@ -20,5 +19,4 @@ export const headerTitle = atom({
 export const currentLocation = atom({
   key: 'currentLocation',
   default: '',
-  effects_UNSTABLE: [persistAtom],
 });
