@@ -35,17 +35,7 @@ const Index = () => {
     setHeaderTitleRecoil('거기 지금 어디야');
   }, []);
   return (
-    <>
-      {isLoading && isLoading ? (
-        <Loading />
-      ) : isError && isError ? (
-        <ErrorBox />
-      ) : (
-        <>
-          <IntroView />
-        </>
-      )}
-    </>
+    <>{isLoading && isLoading ? <Loading /> : isError && isError ? <ErrorBox /> : <IntroView />}</>
   );
 };
 
