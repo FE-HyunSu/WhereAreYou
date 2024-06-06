@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Loading from '../components/loading';
 import ErrorBox from '../components/error';
 import { useRecoilState } from 'recoil';
 import { locationAtom, headerTitle } from '../store/store';
 import IntroView from '../components/intro';
+import FullpageLoading from '../components/common/FullPageLoading';
 
 const Index = () => {
   const [isHeaderTitleRecoil, setHeaderTitleRecoil] = useRecoilState(headerTitle);
@@ -34,9 +34,7 @@ const Index = () => {
     locationSet();
     setHeaderTitleRecoil('거기 지금 어디야');
   }, []);
-  return (
-    <>{isLoading && isLoading ? <Loading /> : isError && isError ? <ErrorBox /> : <IntroView />}</>
-  );
+  return <>{isLoading ? <FullpageLoading /> : isError && isError ? <ErrorBox /> : <IntroView />}</>;
 };
 
 export default Index;
