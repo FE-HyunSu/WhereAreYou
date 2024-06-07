@@ -21,7 +21,7 @@ const Index = () => {
         });
         setTimeout(() => {
           setLoading(false);
-        }, 4000);
+        }, 0);
       } catch {
         setLoading(false);
         setError(true);

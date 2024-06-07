@@ -45,17 +45,7 @@ const Map = () => {
     setLoading(false);
   }, [router.isReady]);
   return (
-    <>
-      {isLoading && isLoading ? (
-        <Loading />
-      ) : isError && isError ? (
-        <ErrorBox />
-      ) : (
-        <>
-          <KakaoMap />
-        </>
-      )}
-    </>
+    <>{isLoading && isLoading ? <Loading /> : isError && isError ? <ErrorBox /> : <KakaoMap />}</>
   );
 };
 

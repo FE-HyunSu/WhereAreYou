@@ -2,11 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Loading = () => {
-  return (
-    <>
-      <LoadingBox></LoadingBox>
-    </>
-  );
+  return <LoadingBox />;
 };
 export default Loading;
 
