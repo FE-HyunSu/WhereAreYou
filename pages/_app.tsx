@@ -24,7 +24,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <meta property="og:description" content="🙋 내가 데리러 갈게" />
           <meta property="og:image" content="/img_meta.png" />
           <link rel="icon" href="/favicon.ico" />
-          <title>🗺 거기 지금 어디야</title>
+          <title>거기 지금 어디야~</title>
         </Head>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
